@@ -143,9 +143,21 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              MakeVideo(image: "emma-1.jpg"),
-                              MakeVideo(image: "emma-2.jpg"),
-                              MakeVideo(image: "emma-3.jpg")
+                              MakeVideo(
+                                image: "emma-1.jpg",
+                                url:
+                                    "https://v.pinimg.com/videos/mc/720p/df/ef/d6/dfefd6e8c369c1a2b6889d35102cce8f.mp4",
+                              ),
+                              MakeVideo(
+                                image: "emma-2.jpg",
+                                url:
+                                    "https://v.pinimg.com/videos/mc/720p/df/ef/d6/dfefd6e8c369c1a2b6889d35102cce8f.mp4",
+                              ),
+                              MakeVideo(
+                                image: "emma-3.jpg",
+                                url:
+                                    "https://v.pinimg.com/videos/mc/720p/df/ef/d6/dfefd6e8c369c1a2b6889d35102cce8f.mp4",
+                              )
                             ]),
                       ),
                       SizedBox(
