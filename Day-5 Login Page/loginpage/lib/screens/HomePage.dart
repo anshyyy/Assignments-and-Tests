@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loginpage/screens/LoginPage.dart';
+import 'package:loginpage/screens/SignUpPage.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -83,7 +84,7 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => LoginPage()),
+                        MaterialPageRoute(builder: (context) => SignUpPage()),
                       );
                     },
                     height: 60,

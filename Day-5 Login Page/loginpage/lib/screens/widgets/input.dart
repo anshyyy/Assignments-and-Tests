@@ -35,7 +35,7 @@ class PlainInput extends StatelessWidget {
                 borderSide: BorderSide(color: Colors.grey)),
           ),
         ),
-        const SizedBox(height: 30),
+        const SizedBox(height: 10),
       ],
     );
   }

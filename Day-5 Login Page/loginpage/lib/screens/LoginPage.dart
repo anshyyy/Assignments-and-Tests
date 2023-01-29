@@ -1,15 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:loginpage/screens/SignUpPage.dart';
 import 'package:loginpage/screens/widgets/Input.dart';
 import 'package:loginpage/screens/widgets/PasswordInput.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final TextEditingController _password = TextEditingController();
+  final TextEditingController _email = TextEditingController();
+  bool _passwordVisible = false;
+  bool _obscureText = true;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _passwordVisible = false;
+    _obscureText = true;
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
@@ -28,33 +47,99 @@ class LoginPage extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
-              children: [
-                Text(
-                  "Login",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-                ),
-                const SizedBox(height: 20),
-                Text(
-                  "Login to your account",
-                  style: TextStyle(color: Colors.grey[700], fontSize: 15),
-                ),
-              ],
+            Expanded(
+              child: Column(
+                children: [
+                  Text(
+                    "Login",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    "Login to your account",
+                    style: TextStyle(color: Colors.grey[700], fontSize: 15),
+                  ),
+                ],
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40),
               child: Column(
                 children: [
-                  PlainInput(
-                    label: "Email",
-                    hintText: "Enter your Email",
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Email",
+                        style: const TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black87),
+                      ),
+                      const SizedBox(height: 5),
+                      TextField(
+                        controller: _email,
+                        keyboardType: TextInputType.text,
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          hintText: "Enter your email",
+                          contentPadding: const EdgeInsets.symmetric(
+                              vertical: 0, horizontal: 10),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30)),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: BorderSide(color: Colors.grey)),
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                    ],
                   ),
-                  const SizedBox(height: 20),
-                  MakeInput(
-                      label: "Password",
-                      hintText: "Enter your Password",
-                      ObscureText: true)
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Password",
+                        style: const TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black87),
+                      ),
+                      const SizedBox(height: 5),
+                      TextFormField(
+                        controller: _password,
+                        keyboardType: TextInputType.text,
+                        obscureText: _obscureText,
+                        decoration: InputDecoration(
+                          hintText: "Enter Your Pasword",
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              _passwordVisible
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: Theme.of(context).primaryColorDark,
+                            ),
+                            onPressed: (() {
+                              setState(() {
+                                _passwordVisible = !_passwordVisible;
+                                _obscureText = !_obscureText;
+                              });
+                            }),
+                          ),
+                          contentPadding: const EdgeInsets.symmetric(
+                              vertical: 0, horizontal: 10),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30)),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: BorderSide(color: Colors.grey)),
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                    ],
+                  )
                 ],
               ),
             ),
@@ -72,10 +157,8 @@ class LoginPage extends StatelessWidget {
                     )),
                 child: MaterialButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
-                    );
+                    print(_password.text);
+                    print(_email.text);
                   },
                   height: 60,
                   color: Colors.yellow,
@@ -89,6 +172,30 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Don't have an account? "),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignUpPage()),
+                    );
+                  },
+                  child: Text("Sign Up",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 18)),
+                )
+              ],
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height / 3,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/background.png'),
+                      fit: BoxFit.cover)),
             )
           ],
         ),
