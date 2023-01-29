@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:loginpage/screens/FirstPage.dart';
 import 'package:loginpage/screens/SignUpPage.dart';
-import 'package:loginpage/screens/widgets/Input.dart';
-import 'package:loginpage/screens/widgets/PasswordInput.dart';
+import 'package:http/http.dart' as http;
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -17,6 +15,30 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _email = TextEditingController();
   bool _passwordVisible = false;
   bool _obscureText = true;
+  bool wrongCreds = false;
+
+  Future<bool> _checkPassword(String email, String password) async {
+    String url = "http://192.168.29.24:3009/api/v1/signin";
+    try {
+      http.Response response = await http
+          .post(Uri.parse(url), body: {'email': email, 'password': password});
+      if (response.statusCode == 201) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: ((context) => FirstPage())));
+      } else {
+        setState(() {
+          wrongCreds = true;
+          _password.clear();
+        });
+      }
+    } catch (err) {
+      print(err);
+      throw err;
+    }
+
+    return false;
+  }
+
   @override
   void initState() {
     // TODO: implement initState
@@ -102,10 +124,10 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       Text(
                         "Password",
-                        style: const TextStyle(
+                        style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w400,
-                            color: Colors.black87),
+                            color: !wrongCreds ? Colors.grey : Colors.red),
                       ),
                       const SizedBox(height: 5),
                       TextFormField(
@@ -119,7 +141,7 @@ class _LoginPageState extends State<LoginPage> {
                               _passwordVisible
                                   ? Icons.visibility
                                   : Icons.visibility_off,
-                              color: Theme.of(context).primaryColorDark,
+                              color: !wrongCreds ? Colors.grey : Colors.red,
                             ),
                             onPressed: (() {
                               setState(() {
@@ -134,7 +156,9 @@ class _LoginPageState extends State<LoginPage> {
                               borderRadius: BorderRadius.circular(30)),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide(color: Colors.grey)),
+                              borderSide: BorderSide(
+                                  color:
+                                      wrongCreds ? Colors.grey : Colors.red)),
                         ),
                       ),
                       const SizedBox(height: 10),
@@ -159,6 +183,7 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     print(_password.text);
                     print(_email.text);
+                    _checkPassword(_email.text, _password.text);
                   },
                   height: 60,
                   color: Colors.yellow,
