@@ -47,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       backgroundColor: kblack,
       body: Container(
-        margin: const EdgeInsets.only(top: 150, bottom: 10, right: 8, left: 8),
+        margin: const EdgeInsets.only(top: 180, bottom: 10, right: 8, left: 8),
         child: Column(
           children: [
             Center(
