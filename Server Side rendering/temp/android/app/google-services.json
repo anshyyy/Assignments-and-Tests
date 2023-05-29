@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "758405977695",
+    "project_id": "flutterserversiderendering",
+    "storage_bucket": "flutterserversiderendering.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758405977695:android:79c6dd15f15a83b021edea",
+        "android_client_info": {
+          "package_name": "com.example.temp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfnRQCGHtQfSAI9qnSU8w0Pp6Ay0HBRrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
