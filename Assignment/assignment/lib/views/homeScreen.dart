@@ -13,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  //url
   var url = Uri.parse("https://api.mfapi.in/mf/119063");
 
   late Map<String, dynamic> dataFromApi = {};
@@ -20,10 +21,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void fetchData() async {
     var response = await http.get(url);
-    print(response.statusCode);
-    await Future.delayed(Duration(seconds: 2));
+    // print(response.statusCode);
+    //delaying for 2 seconds so that the data will be loaded successfully
+    await Future.delayed(const Duration(seconds: 2));
 
     setState(() {
+      //checking the response
       if (response.statusCode / 100 == 2) {
         var jsonResponse =
             convert.jsonDecode(response.body) as Map<String, dynamic>;
@@ -37,14 +40,16 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    print("main run hua hu1");
+    // print("main run hua hu1");
+    //fetching the data when the home state will be build for the first time
     fetchData();
-    print("main run hua hu2");
+    // print("main run hua hu2");
   }
 
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
+      //
       child: Scaffold(
           backgroundColor: kblack,
           body: dataFromApi.isEmpty
@@ -83,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             fontSize: 12)),
                                     const SizedBox(width: 10),
                                     Text(dataFromApi['meta']["scheme_category"],
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             color: Colors.white60,
                                             fontSize: 12))
                                   ],
@@ -147,6 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 )),
       onWillPop: () async {
+        // this will help us to exit the app
         SystemNavigator.pop();
         return true;
       },

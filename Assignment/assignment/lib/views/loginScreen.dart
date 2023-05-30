@@ -12,14 +12,15 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController pin1 = TextEditingController();
+  TextEditingController pin1 = TextEditingController(); // skipping
   TextEditingController pin2 = TextEditingController();
   TextEditingController pin3 = TextEditingController();
   TextEditingController pin4 = TextEditingController();
 
-  final String pin = "1907";
+  final String pin = "1907"; //hardcoded pin for now
   bool isCorrectPassword = true;
 
+  // checking the password is correct or not
   bool checkPassword(String userEnteredPassword) {
     if (pin == userEnteredPassword) return true;
     return false;
@@ -35,6 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
     pin4.dispose();
   }
 
+  //these are for clearing the textfileds when the user will be on last pin box
   void clearControllers() {
     pin1.clear();
     pin2.clear();
@@ -50,6 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
         margin: const EdgeInsets.only(top: 180, bottom: 10, right: 8, left: 8),
         child: Column(
           children: [
+            // grow logo
             Center(
               child: Container(
                 height: 50,
@@ -233,12 +236,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (value.length == 1) {
                         FocusScope.of(context).nextFocus();
                       }
+                      //concatenating all the pin from1,2,3,4
                       String userEnteredPin =
                           pin1.text + pin2.text + pin3.text + pin4.text;
+                      //updating the state by checking the password
                       setState(() {
                         isCorrectPassword = checkPassword(userEnteredPin);
                       });
                       clearControllers();
+
+                      //if the password is correct then go to home page
                       if (isCorrectPassword) {
                         Navigator.pushNamed(context, HomeScreen.routeName);
                       }

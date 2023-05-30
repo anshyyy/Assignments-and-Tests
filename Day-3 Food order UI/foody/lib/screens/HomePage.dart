@@ -34,17 +34,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     });
   }
 
-  @override
-  void didChangeDependencies() {
-    precacheImage(starter.image, context);
-    super.didChangeDependencies();
-  }
-
   void _onTap() {
-    setState(() {
-      _textVisible = false;
-    });
-
     Navigator.push(
       context,
       PageTransition(

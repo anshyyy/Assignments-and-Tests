@@ -1,4 +1,3 @@
-import 'package:assignment/constants/colors.dart';
 import 'package:assignment/views/homeScreen.dart';
 import 'package:assignment/views/loginScreen.dart';
 import 'package:flutter/material.dart';
@@ -14,12 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       home: const LoginScreen(),
       routes: {
-        HomeScreen.routeName: (context) => HomeScreen(),
+        HomeScreen.routeName: (context) => const HomeScreen(),
       },
     );
   }
