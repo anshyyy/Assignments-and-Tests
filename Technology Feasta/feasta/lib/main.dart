@@ -1,3 +1,4 @@
+import 'package:feasta/src/presentation/screens/home_screen.dart';
 import 'package:feasta/src/presentation/screens/ticket_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: TicketScreen());
+        home: HomeScreen());
   }
 }

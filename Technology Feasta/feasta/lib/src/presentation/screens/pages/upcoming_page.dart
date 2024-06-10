@@ -5,8 +5,11 @@ class UpcomingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Upcoming Page"),
+    return const Center(
+      child: Text(
+        "Upcoming Page",
+        style: TextStyle(color: Colors.white),
+      ),
     );
   }
 }
