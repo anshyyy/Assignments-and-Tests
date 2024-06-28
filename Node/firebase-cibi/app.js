@@ -16,6 +16,275 @@ const products = [{
   categories: ["Dress", "Bags","Active Wear"]
 },
 {
+  productId: 2,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 3,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 4,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 5,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 6,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 7,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 8,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 9,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 10,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 11,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 12,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 13,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 14,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 15,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 16,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 17,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 18,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 19,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 20,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 21,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 22,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 23,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 24,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 25,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 26,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 27,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 28,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 29,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
+  productId: 30,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},{
+  productId: 1,
+  productName: "Women's Green Tshirt",
+  productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
+  amount: 123,
+  discount: 15,
+  discountedPrice: 110,
+  categories: ["Dress", "Bags","Active Wear"]
+},
+{
   productId: 1,
   productName: "Women's Green Tshirt",
   productUrl: "https://images.bewakoof.com/t1080/women-s-green-white-all-over-printed-oversized-t-shirt-628018-1716987390-1.jpg",
@@ -1787,27 +2056,76 @@ app.get("/categories", (req, res) => {
 });
 
 app.get("/products", (req, res) => {
-  let { limit, skip } = req.query;
-  console.log(limit,skip);
+  let { page, limit } = req.query;
+  console.log(limit, page);
 
-  // Convert limit and skip to integers
+  // Convert limit and page to integers
   limit = parseInt(limit);
-  skip = parseInt(skip);
+  page = parseInt(page);
 
-  // Set default values if limit or skip are not provided or invalid
+  // Set default values if limit or page are not provided or invalid
   if (isNaN(limit) || limit <= 0) {
-      limit = 10; // default limit
+    limit = 10; // default limit
   }
-  if (isNaN(skip) || skip < 0) {
-      skip = 0; // default skip
+  if (isNaN(page) || page <= 0) {
+    page = 1; // default page
   }
 
-  // Slice the products array to get the desired range
-  const limitedProducts = products.slice(skip, skip + limit);
-  console.log(limitedProducts.length);
+  // Calculate the start index
+  const startIndex = (page - 1) * limit;
+  const endIndex = startIndex + limit;
 
-  return res.status(200).json({ success: true, data: limitedProducts });
+  // Get the limited products
+  const limitedProducts = products.slice(startIndex, endIndex);
+  setTimeout(()=>{
+
+    return res.status(200).json({ success: true, data: limitedProducts });
+  },3000)
+ 
+
 });
+app.post("/login",(req,res)=>{
+  const {password,email} = req.body;
+  console.log(req.body);
+  if(password != "1234" || email != "a@b.com"){
+    return res.status(401).json({
+      message : "Error Wrong Creds!!!"
+    });
+    
+  }
+  
+  return res.status(200).json({
+    success:true,
+    data : {token:121}
+  });
+});
+
+app.get("/user",(req,res)=>{
+  const user = {
+    userId : 121,
+    name : "Anshuman Sharma",
+    email:"anshuman9998@gmail.com",
+    profilePic : "https://cdn.pixabay.com/user/2020/10/31/08-13-03-665_250x250.jpg",
+    wallet : {
+      amount : 121.1,
+      peopleRefered : 10,
+      uniqueCode : "AX123C"
+    }
+  }
+  const headers = req.headers;
+  console.log(headers);
+  const token = headers.authorization.split(" ")[1];
+  if(token != user.userId){
+    return res.status(401).json({success:false,message:"Unautorized"});
+  }
+  return res.status(200).json({
+    success:true,
+    data:user
+  });
+
+
+
+})
 
 app.get("/trending", (req, res) => {
   console.log("fsdfsad");
